@@ -6,8 +6,8 @@ import org.hibernate.annotations.ValueGenerationType;
 import javax.persistence.Entity;
 import javax.persistence.*;
 
-@Entity
-@Data
+@Entity // Used for database representation
+@Data //Used for getters and setters methods.
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
