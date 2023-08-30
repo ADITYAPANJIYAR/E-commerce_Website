@@ -2,7 +2,8 @@ package com.sheryians.major.model;
 
 import lombok.Data;
 
-import javax.management.relation.Role;
+//import com.sheryians.major.model.Role;
+//import javax.management.relation.Role;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -25,8 +26,6 @@ public class User {
     @NotEmpty
     @Email(message = "{errors.invalid_email}")
     private String email;
-
-    @NotEmpty
     private String password;
 
     @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
