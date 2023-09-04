@@ -1,6 +1,6 @@
 package com.sheryians.major.configuration;
 
-//import javax.management.relation.Role;
+
 import com.sheryians.major.model.Role;
 import com.sheryians.major.model.User;
 import com.sheryians.major.repository.RoleRepository;

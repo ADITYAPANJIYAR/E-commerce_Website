@@ -1,9 +1,6 @@
 package com.sheryians.major.model;
 
 import lombok.Data;
-
-//import com.sheryians.major.model.Role;
-//import javax.management.relation.Role;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -28,10 +25,10 @@ public class User {
     private String email;
     private String password;
 
-    @ManyToMany(cascade = CascadeType.MERGE,fetch = FetchType.EAGER)
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_role",
-            joinColumns = {@JoinColumn (name = "USER ID", referencedColumnName = "ID")},
+            joinColumns = {@JoinColumn (name = "USER_ID", referencedColumnName = "ID")},
             inverseJoinColumns = {@JoinColumn (name = "ROLE_ID", referencedColumnName = "ID")}
     )
     private List<Role> roles;
